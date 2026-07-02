@@ -1,0 +1,76 @@
+"""
+Hands-On 1 - Task 1
+
+1. Request-Response Cycle
+
+Browser
+   ↓
+HTTP GET /api/courses/
+   ↓
+URL Router (urls.py)
+   ↓
+View (views.py)
+   ↓
+Model (Database Query)
+   ↓
+View prepares response
+   ↓
+HttpResponse / JsonResponse
+   ↓
+Browser receives response
+
+
+2. Middleware
+
+Middleware sits between the request and the view.
+It can process the request before it reaches the view
+and process the response before it goes back to the browser.
+
+Two built-in middleware:
+
+• SecurityMiddleware
+  - Adds security headers.
+  - Protects against common web attacks.
+
+• AuthenticationMiddleware
+  - Identifies the logged-in user.
+  - Makes request.user available.
+
+
+3. WSGI vs ASGI
+
+WSGI
+- Works synchronously.
+- Handles one request at a time.
+- Default server interface in Django.
+
+ASGI
+- Works asynchronously.
+- Supports WebSockets.
+- Suitable for chat applications,
+  live notifications and real-time apps.
+
+Django uses WSGI by default.
+Use ASGI for asynchronous applications.
+
+
+4. MVC vs MVT
+
+MVC
+
+Model → Database
+View → User Interface
+Controller → Business Logic
+
+Django MVT
+
+Model → Model
+View → Controller
+Template → View
+
+Mapping
+
+MVC Model → Django Model
+MVC Controller → Django View
+MVC View → Django Template
+"""
