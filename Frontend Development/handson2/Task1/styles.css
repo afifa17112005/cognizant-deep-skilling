@@ -1,0 +1,174 @@
+/* CSS Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    color:#333;
+
+}
+
+/* Header */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#004080;
+    color:white;
+
+    padding:20px 50px;
+
+}
+
+/* Logo */
+
+.logo{
+
+    font-size:32px;
+
+}
+
+/* Navigation */
+
+nav ul{
+
+    display:flex;
+    gap:25px;
+
+    list-style:none;
+
+}
+
+nav ul li a{
+
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#ffd700;
+
+}
+
+/* Hero Section */
+
+#hero{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:white;
+
+}
+
+#hero h2{
+
+    font-size:40px;
+    margin-bottom:20px;
+
+}
+
+#hero p{
+
+    width:60%;
+    margin-bottom:25px;
+    line-height:1.6;
+
+}
+
+#hero button{
+
+    padding:14px 30px;
+
+    background:#004080;
+    color:white;
+
+    border:none;
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+#hero button:hover{
+
+    background:#0066cc;
+
+}
+
+/* Stats Bar */
+
+.stats{
+
+    display:flex;
+    justify-content:space-evenly;
+
+    padding:40px;
+
+    background:#eef3ff;
+
+}
+
+.stat-item{
+
+    flex:1;
+
+    margin:15px;
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+}
+
+.stat-item h3{
+
+    font-size:30px;
+    color:#004080;
+
+    margin-bottom:10px;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#004080;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}

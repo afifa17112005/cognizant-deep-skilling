@@ -1,0 +1,239 @@
+/* CSS Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Mobile First */
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#f4f6fa;
+    color:#333;
+
+}
+
+/* Header */
+
+header{
+
+    background:#003366;
+    color:white;
+
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.logo{
+
+    font-size:clamp(1.5rem,3vw,2.5rem);
+    margin-bottom:15px;
+
+}
+
+/* Navigation */
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav ul li a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+nav ul li a:hover{
+
+    color:yellow;
+
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:40vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    background:#dcecff;
+
+}
+
+.hero h2{
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    margin-bottom:25px;
+    max-width:700px;
+
+}
+
+.hero button{
+
+    padding:12px 30px;
+
+    border:none;
+
+    background:#003366;
+    color:white;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.hero button:hover{
+
+    background:#0055aa;
+
+}
+
+/* Courses */
+
+.courses{
+
+    padding:40px;
+
+}
+
+.courses h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+/* Single Column Default */
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+.course-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+    min-height:220px;
+
+}
+
+.course-card h3{
+
+    margin-bottom:15px;
+    color:#003366;
+
+}
+
+.course-card p{
+
+    margin-bottom:20px;
+
+}
+
+.course-card span{
+
+    font-weight:bold;
+
+    color:#0055aa;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+
+header{
+
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+
+nav ul{
+
+    flex-direction:row;
+
+}
+
+.course-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:1024px){
+
+.hero{
+
+    padding:100px;
+
+}
+
+.course-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
