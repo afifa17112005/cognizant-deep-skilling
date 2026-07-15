@@ -1,0 +1,41 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+padding:20px;
+background:#f4f4f4;
+}
+
+header{
+background:#1976d2;
+color:white;
+padding:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.course-card{
+background:white;
+border:1px solid #ccc;
+padding:15px;
+margin-top:15px;
+cursor:pointer;
+}
+
+.course-card:focus{
+outline:3px solid blue;
+}

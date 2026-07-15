@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Student Portal</h1>
+
+<nav aria-label="Main navigation">
+
+<ul>
+
+<li><a href="#" aria-current="page">Home</a></li>
+
+<li><a href="#">Courses</a></li>
+
+<li><a href="#">Profile</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<h2>Courses</h2>
+
+<label for="search">Search Courses</label>
+
+<input
+id="search"
+type="text"
+placeholder="Search courses...">
+
+<p
+id="resultCount"
+role="status"
+aria-live="polite">
+3 courses found
+</p>
+
+<div id="courseContainer">
+
+<div
+class="course-card"
+tabindex="0">
+
+<h3>Data Structures</h3>
+
+<p>Credits : 4</p>
+
+</div>
+
+<div
+class="course-card"
+tabindex="0">
+
+<h3>Database Management</h3>
+
+<p>Credits : 3</p>
+
+</div>
+
+<div
+class="course-card"
+tabindex="0">
+
+<h3>Operating Systems</h3>
+
+<p>Credits : 4</p>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Before:
+Background: #90CAF9
+Text: #FFFFFF
+
+After:
+Background: #1565C0
+Text: #FFFFFF
+Contrast improved to satisfy WCAG AA.
+*/
+
+:root{
+--primary:#1565C0;
+--background:#F5F5F5;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:var(--background);
+padding:30px;
+}
+
+header{
+background:var(--primary);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-top:30px;
+border-radius:10px;
+}
+
+button{
+background:var(--primary);
+color:white;
+border:none;
+padding:10px 20px;
+margin-top:20px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+/*
+Browser Support Check
+
+Feature Tested: CSS Variables
+
+Checked using: https://caniuse.com/
+
+Supported by:
+✔ Chrome
+✔ Edge
+✔ Firefox
+✔ Safari
+
+A CSS Variables Polyfill has been included for older browsers.
+*/
