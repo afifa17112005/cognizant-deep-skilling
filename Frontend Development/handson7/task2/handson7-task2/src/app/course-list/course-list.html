@@ -1,0 +1,21 @@
+<h2>Course List</h2>
+
+@if (loading) {
+
+<h3>Loading...</h3>
+
+} @else {
+
+@for(course of courses; track course.id){
+
+<div class="card">
+
+<h3>{{course.title}}</h3>
+
+<p>ID : {{course.id}}</p>
+
+</div>
+
+}
+
+}
