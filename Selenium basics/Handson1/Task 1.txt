@@ -1,0 +1,81 @@
+Hands-On 1 – Task 1
+QA Concepts, Functional Testing & Defect Lifecycle
+1. Testing Types for the Course Management API
+a) Unit Testing
+
+Description:
+Tests a single function in isolation.
+
+Test Case:
+Verify that the create_course() function correctly creates a course object when valid course details are provided.
+
+Testing Type: Functional Testing
+
+b) Integration Testing
+
+Description:
+Tests whether two or more components work together correctly.
+
+Test Case:
+Send a POST request to /api/courses/ and verify that the course is successfully stored in the database.
+
+Testing Type: Functional Testing
+
+c) System Testing
+
+Description:
+Tests the complete application from beginning to end.
+
+Test Case:
+Create a new course using the API and then retrieve it using the GET endpoint. Verify that all course details are returned correctly.
+
+Testing Type: Functional Testing
+
+d) User Acceptance Testing (UAT)
+
+Description:
+Tests the application from the end user's perspective.
+
+Test Case:
+A college administrator successfully creates a new course and confirms that it appears in the course list for student enrollment.
+
+Testing Type: Functional Testing
+
+2. Functional vs Non-Functional Testing
+Functional Testing
+
+Checks whether the application performs the expected functionality.
+
+Examples:
+
+Creating a new course
+Updating course details
+Deleting a course
+Retrieving course information
+Non-Functional Testing
+
+Checks how well the application performs.
+
+Example: Performance Testing
+
+Test Case:
+Send 500 simultaneous requests to /api/courses/ and verify that the API responds within 2 seconds without crashing.
+
+3. Black-Box Testing vs White-Box Testing
+Black-Box Testing	White-Box Testing
+Tests functionality without knowing the source code.	Tests internal code structure and logic.
+Focuses on inputs and outputs.	Focuses on code paths, conditions, and loops.
+Usually performed by QA Testers.	Usually performed by Developers.
+
+QA Tester: Performs Black-Box Testing
+
+Developer: Performs White-Box Testing
+
+4. Formal Test Cases for POST /api/courses/
+Test Case ID	Description	Preconditions	Test Steps	Expected Result	Actual Result	Pass/Fail
+TC_001	Create a course with valid details	API is running	1. Send POST request with valid course data.
+2. Click Send.	HTTP 201 Created. Course is saved successfully.		
+TC_002	Create a course with missing required fields	API is running	1. Send POST request without Course Name.
+2. Click Send.	HTTP 400 Bad Request with validation message.		
+TC_003	Create a course with duplicate Course ID	API is running	1. Create a course.
+2. Send another POST request with the same Course ID.	Duplicate course should not be created. Appropriate error message should be returned.

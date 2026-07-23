@@ -1,0 +1,82 @@
+Hands-On 3
+Test Automation Process, Lifecycle & Framework Types
+Task 1: Automation Decision and Test Case Selection
+1. Criteria for Deciding Whether to Automate
+Criterion 1: Repetitive Test
+
+Tests that are executed frequently should be automated.
+
+Application:
+The POST /api/courses/ endpoint is tested after every code change, so it is suitable for automation.
+
+Criterion 2: Regression Testing
+
+Regression tests should be automated because they are executed repeatedly.
+
+Application:
+Whenever a new feature is added, the POST API should still return 201 Created.
+
+Criterion 3: Stable Functionality
+
+Stable features that rarely change are good candidates for automation.
+
+Application:
+The Create Course API is a core feature and changes infrequently.
+
+Criterion 4: Time Saving
+
+Automation reduces manual effort for repetitive tasks.
+
+Application:
+Instead of manually testing the POST API multiple times, an automated script can execute it within seconds.
+
+Criterion 5: Data-Driven Testing
+
+Tests requiring multiple input combinations are ideal for automation.
+
+Application:
+The POST endpoint can be tested with different course names, IDs, and descriptions automatically.
+
+2. Automate or Manual
+Test Case	Decision	Justification
+a) Regression test for all CRUD endpoints after every code change	Automate	Frequently executed after each release.
+b) Exploratory testing of a new search feature	Manual	Requires human observation and creativity.
+c) Performance test with 100 concurrent users	Automate	Load testing tools can simulate multiple users.
+d) UI test for the login form	Automate	UI regression tests are executed repeatedly.
+e) Verify Swagger API documentation	Manual	Documentation changes are reviewed manually.
+f) Smoke test after deployment	Automate	Quickly verifies that the application is running.
+3. Test Automation ROI
+
+Definition
+
+Test Automation ROI (Return on Investment) measures whether the time and effort spent creating automated tests are worthwhile compared to manual testing.
+
+Given
+Automation Development Time = 4 hours
+Manual Execution Time = 30 minutes (0.5 hour)
+ROI Calculation
+Number of Runs = 4 ÷ 0.5
+
+Number of Runs = 8
+
+Therefore, after 8 executions, automation becomes more cost-effective than manual testing.
+
+Maintenance Overhead
+
+After the 10th run, assume 20% maintenance effort is required for script updates.
+
+Even with maintenance, automation remains more efficient than repeatedly performing manual tests.
+
+4. Flaky Test
+Definition
+
+A flaky test is a test that sometimes passes and sometimes fails even though the application has not changed.
+
+Example
+
+A Selenium test clicks a button before it becomes clickable, causing random failures.
+
+How to Prevent Flaky Tests
+Use Explicit Waits instead of time.sleep().
+Use reliable and stable locators (ID or CSS Selector).
+Keep test data and the testing environment consistent.

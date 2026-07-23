@@ -1,0 +1,86 @@
+Hands-On 2
+SDLC vs TDLC – V-Model & Agile QA Integration
+Task 1: V-Model Mapping
+1. V-Model Diagram
+                 SDLC (Development)
+
+          Requirements
+                │
+          System Design
+                │
+        Architecture Design
+                │
+          Module Design
+                │
+              Coding
+                │
+──────────────────────────────────────
+              Unit Testing
+                │
+         Integration Testing
+                │
+           System Testing
+                │
+       Acceptance Testing
+
+               TDLC (Testing)
+2. SDLC ↔ TDLC Mapping
+SDLC Phase	Corresponding TDLC Phase	Test Artifact Produced
+Requirements	Acceptance Testing	Acceptance Test Plan
+System Design	System Testing	System Test Cases
+Architecture Design	Integration Testing	Integration Test Cases
+Module Design	Unit Testing	Unit Test Cases
+Coding	Executes all testing	Source Code
+3. Entry and Exit Criteria
+Unit Testing
+
+Entry Criteria
+
+Module coding is completed.
+Code review is completed.
+
+Exit Criteria
+
+All unit tests pass.
+No critical defects remain.
+Integration Testing
+
+Entry Criteria
+
+All modules are unit tested.
+Modules are integrated.
+
+Exit Criteria
+
+Integration test cases pass.
+Interfaces work correctly.
+System Testing
+
+Entry Criteria
+
+Complete application is deployed.
+Integration testing is completed.
+
+Exit Criteria
+
+System test cases are executed.
+No critical or high-severity defects remain.
+User Acceptance Testing (UAT)
+
+Entry Criteria
+
+System testing is completed.
+Business users are available.
+
+Exit Criteria
+
+Users approve the application.
+Product is ready for deployment.
+4. QA Involvement Before Testing
+Requirement Review
+
+QA reviews the requirements to identify ambiguities, missing requirements, and unclear acceptance criteria before development starts.
+
+Design Review
+
+QA reviews the system design to identify potential testing challenges, validate testability, and prepare the test strategy early.

@@ -1,0 +1,78 @@
+Hands-On 1 – Task 2
+Defect Lifecycle & Severity Classification
+1. Defect Lifecycle
+New
+   ↓
+Assigned
+   ↓
+Open
+   ↓
+Fixed
+   ↓
+Retest
+   ↓
+Verified
+   ↓
+Closed
+Rejected Path
+
+If the developer finds that the reported issue is not a valid defect or cannot be reproduced, the defect is marked as Rejected.
+
+Deferred Path
+
+If the defect is valid but fixing it is postponed to a future release because of low priority or time constraints, it is marked as Deferred.
+
+2. Severity and Priority Classification
+Bug	Severity	Priority	Justification
+a) POST /api/courses/ returns 500 Internal Server Error for all requests.	Critical	P1	The API is completely unusable. Users cannot create courses, so it must be fixed immediately.
+b) Course names longer than 150 characters are silently truncated.	Medium	P3	The application still works, but data is stored incorrectly, affecting data quality.
+c) Swagger /docs page contains a typo.	Low	P4	This is only a documentation issue and does not affect functionality.
+d) Login occasionally returns 401 Unauthorized even with correct credentials.	High	P1	Users may not be able to log in consistently. Since it is intermittent, it is difficult to reproduce and should be fixed urgently.
+3. Defect Report
+
+Defect ID: BUG-001
+
+Title: POST /api/courses/ returns 500 Internal Server Error
+
+Environment:
+
+Windows 11
+Google Chrome
+Python 3.10
+FastAPI Application
+
+Build Version:
+v1.0.0
+
+Severity:
+Critical
+
+Priority:
+P1
+
+Steps to Reproduce:
+
+Start the Course Management API.
+Open Swagger UI.
+Select POST /api/courses/.
+Enter valid course details.
+Click Execute.
+
+Expected Result:
+The API should return HTTP 201 Created and store the course successfully.
+
+Actual Result:
+The API returns HTTP 500 Internal Server Error.
+
+Attachments:
+Screenshot of the 500 Internal Server Error.
+
+4. Difference Between Severity and Priority
+Severity	Priority
+Measures how much the defect affects the system.	Measures how quickly the defect should be fixed.
+Decided based on the impact of the bug.	Decided based on business importance.
+Example
+
+A spelling mistake on the CEO's dashboard has Low Severity because it does not affect system functionality.
+
+However, it has High Priority because it is visible to important stakeholders and should be corrected before release.

@@ -1,0 +1,70 @@
+Task 2: Agile QA and Shift-Left Testing
+1. Problems in Waterfall Testing
+Problem 1
+
+Defects are discovered very late, making them expensive to fix.
+
+Problem 2
+
+Requirement misunderstandings are identified only after development is completed.
+
+Problem 3
+
+Testing time becomes limited because development consumes most of the project schedule.
+
+2. QA Responsibilities in Agile Ceremonies
+Agile Ceremony	QA Responsibility
+Sprint Planning	Define acceptance criteria and estimate testing effort.
+Daily Stand-up	Report testing progress, blockers, and defect status.
+Sprint Review	Validate completed features and demonstrate testing results.
+Retrospective	Suggest improvements to the testing process and team collaboration.
+3. Shift-Left Practices
+a) Requirement Review
+
+QA reviews requirements early to ensure they are complete, clear, and testable.
+
+b) Writing Test Cases Before Coding
+
+QA prepares test cases before development begins, helping developers understand expected behavior.
+
+c) Static Code Analysis
+
+Developers use code analysis tools to identify coding issues before execution.
+
+d) API Contract Testing
+
+Verify that API request and response formats match the agreed API specification before integration.
+
+4. Acceptance Criteria (Given-When-Then)
+Scenario 1 – Successful Course Creation
+
+Given
+The college admin is logged in.
+
+When
+The admin enters valid course details and clicks Create.
+
+Then
+The course is created successfully and a confirmation message is displayed.
+
+Scenario 2 – Duplicate Course Code
+
+Given
+A course with the same course code already exists.
+
+When
+The admin submits the new course.
+
+Then
+The system displays an error stating that the course code already exists.
+
+Scenario 3 – Missing Required Fields
+
+Given
+The admin opens the course creation page.
+
+When
+The admin submits the form without entering mandatory fields.
+
+Then
+Validation messages are displayed, and the course is not created.

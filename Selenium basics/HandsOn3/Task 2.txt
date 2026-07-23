@@ -1,0 +1,45 @@
+Task 2: Compare Automation Framework Types
+1. Automation Framework Comparison
+Framework	Description	Advantage	Disadvantage	Example
+Linear	Test steps are written sequentially.	Easy to learn.	Difficult to maintain.	Small login test.
+Modular	Application is divided into reusable modules.	High code reuse.	Initial setup takes time.	Login module reused in multiple tests.
+Data-Driven	Test data is stored separately from test scripts.	Supports multiple input combinations.	Requires external data files.	Testing multiple course records.
+Keyword-Driven	Keywords define actions instead of programming logic.	Non-technical users can create tests.	Complex framework design.	Business users preparing test cases.
+Hybrid	Combines Modular, Data-Driven, and Keyword-Driven frameworks.	Highly flexible and maintainable.	More complex to develop.	Enterprise Course Management System.
+2. Recommended Framework
+Recommendation
+
+A Hybrid Framework is recommended.
+
+Justification
+Supports testing with 50 different usernames and passwords using Data-Driven Testing.
+Reuses login functionality across multiple test cases using Modular Design.
+Allows both technical and non-technical team members to contribute through Keyword-Driven features.
+Easy to maintain for large projects.
+3. Hybrid Framework Folder Structure
+CourseManagementAutomation/
+│
+├── config/
+│   └── config.py
+│
+├── test_data/
+│   └── login_data.xlsx
+│
+├── pages/
+│   ├── login_page.py
+│   ├── course_page.py
+│   └── dashboard_page.py
+│
+├── utilities/
+│   ├── browser.py
+│   ├── logger.py
+│   └── helpers.py
+│
+├── tests/
+│   ├── test_login.py
+│   ├── test_courses.py
+│   └── test_dashboard.py
+│
+├── reports/
+│
+└── requirements.txt
